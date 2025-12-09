@@ -20,7 +20,7 @@ defmodule QyVisualizer.MixProject do
   defp deps do
     [
       {:telemetry, "~> 1.3"},
-      {:qy_core, git: "https://github.com/SynapticStrings/QyCore.git", tag: "0.2.0"}
+      {:qy_core, git: "https://github.com/SynapticStrings/QyCore.git", tag: "0.2.1"}
     ]
   end
 end
