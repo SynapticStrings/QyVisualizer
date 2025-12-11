@@ -1,4 +1,4 @@
-alias QyCore.{Recipe, Step, Param}
+alias Orchid.{Recipe, Step, Param}
 
 defmodule StepA do
   use Step
@@ -29,7 +29,7 @@ recipe = Recipe.new(
 )
 
 recipe
-|> QyCore.run([%Param{name: :in, type: nil}])
+|> Orchid.run([%Param{name: :in, type: nil}])
 |> IO.inspect(label: "[Result]")
 
 recipe

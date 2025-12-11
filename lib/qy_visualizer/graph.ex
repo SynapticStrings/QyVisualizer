@@ -1,13 +1,13 @@
 defmodule QyVisualizer.Graph do
   defstruct [:name, :nodes, :edges]
 
-  @spec build(QyCore.Recipe.t()) :: %QyVisualizer.Graph{edges: any(), name: any(), nodes: any()}
-  def build(%QyCore.Recipe{} = recipe) do
+  @spec build(Orchid.Recipe.t()) :: %QyVisualizer.Graph{edges: any(), name: any(), nodes: any()}
+  def build(%Orchid.Recipe{} = recipe) do
     do_build(recipe.name, recipe.steps, recipe.opts)
   end
 
   def do_build(name, steps, _recipe_opts) do
-    steps = steps |> Enum.map(&QyCore.Step.extract_schema/1)
+    steps = steps |> Enum.map(&Orchid.Step.extract_schema/1)
 
     # 1. 预处理：建立 "生产者映射表" (Key -> {NodeID, HandleName})
     #    这让我们知道某个变量是由 "谁" 的 "哪个端口" 生产的

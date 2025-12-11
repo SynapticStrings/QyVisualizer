@@ -3,7 +3,7 @@ defmodule QyVisualizer.Hook.FetchReport do
   需要在 Execute 前。
   """
 
-  @behaviour QyCore.Runner.Hook
+  @behaviour Orchid.Runner.Hook
 
   def call(context, next_fn) do
     # TODO: ...

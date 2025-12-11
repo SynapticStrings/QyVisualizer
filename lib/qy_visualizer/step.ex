@@ -1,11 +1,11 @@
 defmodule QyVisualizer.Step do
   @moduledoc """
-  介入 `QyCore.Step` 的相关模块。
+  介入 `Orchid.Step` 的相关模块。
 
   ## Examples
 
       defmodule StepWithPattern do
-        use QyCore.Step
+        use Orchid.Step
         use QyVisualizer.Step,
           tailwind: ~w(bg-green ...)
 
